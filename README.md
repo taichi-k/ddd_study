@@ -220,3 +220,27 @@ CQSやCQRSなどの考え方のように、
 そういう場合は、コンテキスト別にClassを分割したりもできる。
 
 この際、コンテキストマップを作成しておかないと、どのClassがつながっているかに気付きづらくなる。
+
+## 付録：ファイル構成例
+
+- Application
+  - Users
+    - Create
+      - IUserCreateInputPort.java
+      - UserCreateInputData.java
+      - UserCreateInteractor.java
+- Domain
+  - Models
+    - Users
+      - User.java
+      - UserId.java
+      - UserName.java
+  - Services
+    - UserService.java
+  - Shared
+    - ISpecification.java
+- Infra
+  - InMemory
+    - Users
+      - InMemoryUserFactory.java
+      - InMemoryUserRepository.java
